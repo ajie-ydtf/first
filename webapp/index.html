@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/Org.js"></script>
+<script type="text/javascript" src="js/user.js"></script>
+</head>
+<body>
+<input type="button" value="获取机构信息" onclick="getO()" />
+<input type="button" value="获取用户信息" onclick="getU()" />
+<input type="button" value="获取用户信息1" onclick="u1.getUserinfo()" />
+<script type="text/javascript">
+var u1=Object.create(User);
+
+function getO(){
+	Org.getOrgInfo();
+	alert(Org.orgid);
+	alert(Org.orgname);
+	var a=new Org.SetOrgInfo();
+	alert(a.orgname);
+}
+
+function getU(){
+	var u=Object.create(User);
+	u.getUserinfo();
+	alert(u.username);
+}
+</script>
+</body>
+</html>
